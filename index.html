@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -223,37 +223,123 @@
     </div>
   </section>
 
-  <!-- ===== PERSONAS ===== -->
-  <section class="insights" id="personas">
+  <!-- ===== WHO IT'S FOR — INTERACTIVE DIAGNOSTIC ===== -->
+  <section class="quiz-section" id="personas">
     <div class="container">
-      <span class="eyebrow">Who it&rsquo;s for</span>
-      <h2>Built for the three buyers who sign off CX transformation</h2>
+      <div class="quiz-header">
+        <span class="eyebrow">Who this is for</span>
+        <h2>Is this workshop for you?</h2>
+        <p>It is if you oversee any of these three areas. Pick yours &mdash; 60 seconds tells you whether the full 45 are worth it.</p>
+      </div>
 
-      <div class="insights-grid personas-grid">
-        <div class="insight-card">
-          <div class="insight-body">
-            <span class="insight-category">CX Ops &amp; COOs</span>
-            <h4>You can&rsquo;t measure customer effort consistently</h4>
-            <p><strong>Pain:</strong> Effort measurement is inconsistent across voice, digital, and self service. Repeat contacts drive up operational cost.</p>
-            <p><strong>Gain:</strong> Discover where journeys break, and quantify effort reduction in your existing data.</p>
+      <div class="quiz-grid">
+        <!-- Card 1: CX Ops & COOs -->
+        <article class="quiz-card" data-role="cxops" data-state="teaser">
+          <div class="quiz-panel quiz-panel-teaser">
+            <span class="quiz-eyebrow">CX Ops &amp; COOs</span>
+            <h3 class="quiz-title">Effort and contact costs you can&rsquo;t explain</h3>
+            <p class="quiz-desc">You&rsquo;re running tight ops but can&rsquo;t cleanly see where repeat contacts and effort spikes originate &mdash; which means you can&rsquo;t eliminate them at the root.</p>
+            <button type="button" class="quiz-btn-primary" data-action="start">Take the 60-second test <span class="arrow">&rarr;</span></button>
           </div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-body">
-            <span class="insight-category">Risk &amp; Compliance</span>
-            <h4>You can&rsquo;t prove vulnerable customers are treated fairly</h4>
-            <p><strong>Pain:</strong> Vulnerability identification relies on agent judgment. Fair treatment is hard to evidence under regulatory scrutiny.</p>
-            <p><strong>Gain:</strong> Learn how to identify vulnerability objectively and evidence duty of care with data.</p>
+
+          <div class="quiz-panel quiz-panel-test">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close test">&times;</button>
+            <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="quiz-progress-fill"></div>
+            </div>
+            <div class="quiz-counter">Question <span class="quiz-q-index">1</span> of 3</div>
+            <p class="quiz-question"></p>
+            <div class="quiz-answers">
+              <button type="button" class="quiz-answer" data-action="answer" data-score="2" aria-label="Yes">Yes</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="1" aria-label="Partially">Partially</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="0" aria-label="No">No</button>
+            </div>
           </div>
-        </div>
-        <div class="insight-card">
-          <div class="insight-body">
-            <span class="insight-category">CFO &amp; CIO</span>
-            <h4>You&rsquo;re losing revenue but can&rsquo;t quantify where</h4>
-            <p><strong>Pain:</strong> Revenue leakage goes unquantified. Transformation investment lacks ROI justification.</p>
-            <p><strong>Gain:</strong> Identify where revenue is leaking and calculate the ROI of fixing it.</p>
+
+          <div class="quiz-panel quiz-panel-result">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close result">&times;</button>
+            <div class="quiz-result-score"><span class="quiz-score-value">0</span><span class="quiz-score-max"> / 6</span></div>
+            <span class="quiz-tier-label"></span>
+            <h3 class="quiz-tier-headline"></h3>
+            <p class="quiz-tier-body"></p>
+            <div class="quiz-result-actions">
+              <a class="quiz-btn-primary quiz-cta" href="#cta">Book the workshop <span class="arrow">&rarr;</span></a>
+              <button type="button" class="quiz-btn-retake" data-action="retake">Retake</button>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <!-- Card 2: Risk & Compliance -->
+        <article class="quiz-card" data-role="risk" data-state="teaser">
+          <div class="quiz-panel quiz-panel-teaser">
+            <span class="quiz-eyebrow">Risk &amp; Compliance</span>
+            <h3 class="quiz-title">Consumer Duty evidence you&rsquo;d stand behind</h3>
+            <p class="quiz-desc">You can report on vulnerable customer outcomes, but you&rsquo;re not sure the evidence would survive an FCA deep-dive &mdash; and you don&rsquo;t want to find out the hard way.</p>
+            <button type="button" class="quiz-btn-primary" data-action="start">Take the 60-second test <span class="arrow">&rarr;</span></button>
+          </div>
+
+          <div class="quiz-panel quiz-panel-test">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close test">&times;</button>
+            <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="quiz-progress-fill"></div>
+            </div>
+            <div class="quiz-counter">Question <span class="quiz-q-index">1</span> of 3</div>
+            <p class="quiz-question"></p>
+            <div class="quiz-answers">
+              <button type="button" class="quiz-answer" data-action="answer" data-score="2" aria-label="Yes">Yes</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="1" aria-label="Partially">Partially</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="0" aria-label="No">No</button>
+            </div>
+          </div>
+
+          <div class="quiz-panel quiz-panel-result">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close result">&times;</button>
+            <div class="quiz-result-score"><span class="quiz-score-value">0</span><span class="quiz-score-max"> / 6</span></div>
+            <span class="quiz-tier-label"></span>
+            <h3 class="quiz-tier-headline"></h3>
+            <p class="quiz-tier-body"></p>
+            <div class="quiz-result-actions">
+              <a class="quiz-btn-primary quiz-cta" href="#cta">Book the workshop <span class="arrow">&rarr;</span></a>
+              <button type="button" class="quiz-btn-retake" data-action="retake">Retake</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: CFO & CIO -->
+        <article class="quiz-card" data-role="cfo" data-state="teaser">
+          <div class="quiz-panel quiz-panel-teaser">
+            <span class="quiz-eyebrow">CFO &amp; CIO</span>
+            <h3 class="quiz-title">Transformation ROI you can defend</h3>
+            <p class="quiz-desc">You&rsquo;ve approved CX investment on directional business cases. You&rsquo;d prefer to approve the next one on math &mdash; with cohort-level revenue attribution, not faith.</p>
+            <button type="button" class="quiz-btn-primary" data-action="start">Take the 60-second test <span class="arrow">&rarr;</span></button>
+          </div>
+
+          <div class="quiz-panel quiz-panel-test">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close test">&times;</button>
+            <div class="quiz-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="quiz-progress-fill"></div>
+            </div>
+            <div class="quiz-counter">Question <span class="quiz-q-index">1</span> of 3</div>
+            <p class="quiz-question"></p>
+            <div class="quiz-answers">
+              <button type="button" class="quiz-answer" data-action="answer" data-score="2" aria-label="Yes">Yes</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="1" aria-label="Partially">Partially</button>
+              <button type="button" class="quiz-answer" data-action="answer" data-score="0" aria-label="No">No</button>
+            </div>
+          </div>
+
+          <div class="quiz-panel quiz-panel-result">
+            <button type="button" class="quiz-close" data-action="close" aria-label="Close result">&times;</button>
+            <div class="quiz-result-score"><span class="quiz-score-value">0</span><span class="quiz-score-max"> / 6</span></div>
+            <span class="quiz-tier-label"></span>
+            <h3 class="quiz-tier-headline"></h3>
+            <p class="quiz-tier-body"></p>
+            <div class="quiz-result-actions">
+              <a class="quiz-btn-primary quiz-cta" href="#cta">Book the workshop <span class="arrow">&rarr;</span></a>
+              <button type="button" class="quiz-btn-retake" data-action="retake">Retake</button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
